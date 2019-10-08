@@ -10,4 +10,4 @@
 
  ## Domain model
 
- ![Bookmark Manager domain model](./public/images/bookmark_manager_1.png)
+ ![Bookmark Manager domain model](https://raw.githubusercontent.com/makersacademy/course/master/bookmark_manager/images/bookmark_manager_1.png?token=AMJF77DYPGEW7B2KGLPVABS5UWE2Q)
