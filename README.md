@@ -16,6 +16,10 @@
  So I can remove my bookmark from Bookmark Manager
  I want to delete a bookmark
 
+ As a user
+ So I can change a bookmark in Bookmark Manager
+ I want to update a bookmark
+
  ## Domain model
 
  ![Bookmark Manager domain model](https://raw.githubusercontent.com/makersacademy/course/master/bookmark_manager/images/bookmark_manager_1.png?token=AMJF77DYPGEW7B2KGLPVABS5UWE2Q)

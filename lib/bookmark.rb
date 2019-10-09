@@ -28,6 +28,18 @@ class Bookmark
     connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
   end
 
+  def self.update(id:, url:, title:)
+    connection = Bookmark.choose_connection
+    result = connection.exec("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = #{id} RETURNING id, url, title;")
+    Bookmark.new(result[0]['id'], result[0]['url'], result[0]['title'])
+  end
+
+  def self.find(id:)
+    connection = Bookmark.choose_connection
+    result = connection.exec("SELECT * FROM bookmarks WHERE id = #{id};")
+    Bookmark.new(result[0]['id'], result[0]['url'], result[0]['title'])
+  end
+
   private
 
   def self.choose_connection
