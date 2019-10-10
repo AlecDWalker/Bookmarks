@@ -17,6 +17,12 @@ describe Bookmark do
       expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'
     end
   end
+  describe '.create' do
+    it 'does not create a bookmark if URL given is invalid' do
+      bookmark = Bookmark.add_bookmark(url: 'hello', title: 'Hello')
+      expect(Bookmark.all.length).to eq 0
+    end
+  end
   describe '.delete' do
     it 'deleted the selected bookmark' do
       bookmark = Bookmark.add_bookmark(title: 'Makers Academy', url: 'https://www.makersacademy.com')
